@@ -1,0 +1,216 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Gospel Artist" />
+    <meta name="author" content="morese" />
+    <title>Artist Name</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+
+    <link href="{% static 'Styles/main.css' %}" rel="stylesheet"/>
+    <link href="{% static 'Styles/responsive.css' %}" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 shadow" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top">Logo</a>
+        <div class="nav-res mr-0">
+            <ul class="ml-auto my-2">
+                <li class="nav-item mr-4 navBar_resp2"><a href="#about"><i class="fas fa-home fa-1x"></i></a></li>
+                <li class="nav-item mr-5 navBar_resp2"><a href="#portfolio"><i class="fas fa-book fa-1x"></i></a></li>
+            </ul>
+        </div>
+        <div class="main_nav">
+            <ul class="navBar_resp1 ml-auto my-2">
+                <li class="nav-item mr-4"><a href="#">HOME <i class="fas fa-home"></i></a></li>
+                <li class="nav-item mr-5"><a href="#">BOOKINGS <i class="fas fa-book"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+</div>
+
+
+<!--Header-->
+<header class="masthead">
+    <div class="container h-100">
+        <div class="row h-100 col-lg-6 align-items-center justify-contents-end text-light mt-5">
+            <div class="contents">
+                <p class="name" style="letter-spacing: 3px; font-size: 13px;">Artist Name <i class="fas fa-star"></i></p>
+                <h2 class="summary" style="font-weight: bold!important;">BEST ARTIST AND A PROFESSIONAL PHOTOGRAPHER</h2>
+                <p class="description text-muted" style="letter-spacing: 1px;">A brief description about your work here..<br> this could be your slogan, motto or vision.</p>
+                <ul class="contacts d-flex align-items-center justify-contents-end">
+                    <li class="text-center">
+                        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#"><i class="fab fa-instagram fa-2x"></i></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<section class="myWorks">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col myWorks_details mt-4">
+                <h1 class="font-weight-bold text-center">
+                    <strong class="myWorks_header">MY WORKS</strong>
+                </h1>
+            </div>
+        </div>
+            <div class="row mt-1 mb-2">
+                <div class="col-lg-4 col-md-4 col-sm-6 text-center mb-5">
+                    <a href="#">
+                        <i class="fas fa-music fa-4x"></i>
+                        <p class="myWorks_info px-5 pt-4 mb-4">My songs are here from my first production to the last. Enjoy the best from (your name).</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 text-center mb-5">
+                    <a href="#">
+                        <i class="fas fa-camera fa-4x"></i>
+                        <p class="myWorks_info px-5 pt-4 mb-4">See how my photography works. Get to see what i can offer photography. Enjoy my art works.</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 text-center mb-3">
+                    <a href="#">
+                        <i class="fas fa-icons fa-4x"></i>
+                        <p class="myWorks_info px-5 pt-4 mb-4">Our 5 star graphics design by (artistName) is what everybody wants.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!--LAtest songs-->
+
+<div class="container latest_songs align-items-center justify-contents-center">
+    <div class="row row-cols-12 mb-5">
+        <div class="col">
+            <h1 class="latest_songs_header text-center">LATEST SONGS</h1>
+        </div>
+    </div>
+  <div class="row latest_songs_music mt-5">
+
+    {% for musics in music %}
+
+    <div class="col-lg-4 col-md-4 col-sm-6 latest_music latest_music mb-4">
+        <a href="#">
+        <div class="card" style="background: linear-gradient(to bottom, rgba(70, 20, 1, 0.5) 0%, 
+        rgba(0, 10, 1, 0.7) 90%), url('{{musics.music_img.url}}'); background-position: center; background-repeat: no-repeat;
+        background-attachment: scroll; background-size: cover;">
+          <div class="card-body">
+            <h5 class="card-title">{{musics.music_name}}<span style="float: right; padding-top: -6px;"><i class="fab fa-youtube fa-2x"></i></h5>
+            <h6 class="card-subtitle mb-2">Producer: {{musics.prod_name}}</h6>
+            <p class="card-text">{{musics.music_desc}}</p>
+          </div>
+        </div>
+    </a>
+    </div>
+
+    {% endfor %}
+  </div>
+
+  <div class="row all_songs">
+    <div class="col-12 ml-5">
+        <a href="" class="" style="color: black;">
+            <p class="all_songs_link"><i class="fas fa-chevron-circle-down"></i> All songs</p>
+        </a>
+    </div>
+  </div>
+</div>
+
+
+
+<footer class="footer pt-3 mt-4">
+    <div class="container mb-2 mt-2">
+        <div class="row">
+            <div class="col-sm-6 col-lg-4 col-md-6 text-left">
+                <h5 class="footer_name"><strong>PEETS</strong> <i class="fas fa-star fa-1x"></i></h5>
+                <p class="foter_sub">©2020 | All Rights Reserved
+            </div>
+            <div class="foot col-lg-4 mt-3">
+                <ul class="contacts2 d-flex align-items-center justify-contents-end">
+                    <li class="text-center">
+                        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#"><i class="fab fa-instagram fa-2x"></i></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-md-6 text-right">
+                <h5 class="footer_name"><strong>Contact Developer</strong></h5>
+                <p class="foter_sub">peetsm001@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<br>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="{% static 'js/scripts.js' %}"></script>
+
+  <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 5,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+      },
+    });
+  </script>
+
+</body>
+</html>

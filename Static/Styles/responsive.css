@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@media (min-width: 992px) {
+	.bookings {
+    width: 50%!important;
+  }
+}
+
+@media (max-width: 992px) {
+	.foot {
+		display: none!important;
+	}
+	.summary {
+		font-size: 25px;
+	}
+	.latest_songs_header, .myWorks_header, .arts_header, .interviews_header, .myBio_header {
+	 	font-size: 33px;
+	}
+	.myBio_details h2 {
+		font-size: 25px;
+		letter-spacing: 1.5px;
+	}
+
+	.bookings {
+    width: 70%!important;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+	.navBar_resp1 {
+		font-size: 14px;
+	}
+
+	.navBar_resp1 ul li a{
+		float: right;
+	}
+	.summary {
+		font-size: 22px;
+	}
+	.latest_songs_header, .myWorks_header, .arts_header, .interviews_header, .myBio_header {
+ 		font-size: 28px!important;
+	}
+	.myBio_details h2 {
+		font-size: 23px;
+		letter-spacing: 1px;
+	}
+
+	.bio_detail {
+		font-size: 15px;
+	}
+
+	.footer_name {
+		font-size: 16px;
+	}
+	.foter_sub {
+		font-size: 14px;
+	}
+
+}
+
+
+@media (min-width: 576px) {
+	.navBar_resp1 {
+	display: inline-flex;
+	}
+	.nav-res ul li  {
+	display: none;
+	}
+}
+
+@media (max-width: 576px) {
+	.navBar_resp1 {
+		display: none;
+	}
+	.nav-res ul li  {
+	display: inline-flex!important;
+	}
+	.summary {
+		font-size: 19px!important;
+	}
+	.latest_songs_header, .myWorks_header, .arts_header, .interviews_header, .myBio_header {
+ 		font-size: 27px!important;
+	}
+	.swiper-slide {
+	  background-position: center;
+	  background-size: cover;
+	  width: 250px;
+	  height: 270px;
+	}
+	.swiper-slide h5 {
+		font-size: 13px;
+	}
+	.myBio_details h2 {
+		font-size: 21px;
+		letter-spacing: 1px;
+	}
+
+	.bookings {
+	    width: 100%!important;
+	    margin: auto;
+  }
+  .bookings h5 {
+  	font-size: 15px;	
+  }
+  .footer .col-sm-6 {
+  	text-align: center!important;
+  	margin-top: 20px;
+  }
+
+}
+
+@media (max-width: 425px) {
+	.latest_songs_header, .myWorks_header, .arts_header, .interviews_header, .myBio_header {
+ 		font-size: 25px!important;
+}
+.myWorks .fas {
+	font-size: 10px!important;
+}
+}
